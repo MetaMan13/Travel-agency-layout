@@ -1,0 +1,23 @@
+@keyframes slideInFromRight{
+    from{
+        top: 0;
+        right: -150%;
+    }
+
+    to{
+        top: 0;
+        left: 0%;
+    }
+}
+
+@keyframes slideOutToRight{
+    from{
+        top: 0;
+        right: 0%;
+    }
+
+    to{
+        top: 0;
+        left: -150%;
+    }
+}

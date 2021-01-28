@@ -1,0 +1,61 @@
+.landing{
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: url('./../../images/test.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    color: $white;
+
+    &-mobile{
+        width: 90%;
+        margin: 0 auto;
+        height: 45%;
+
+        &-header, &-text, &-button{
+            position: relative;
+            z-index: 1;
+        }
+        
+        &-header{
+            h2{
+                font-size: $font-xl;
+                font-weight: 500;
+            }
+        }
+
+        &-text{
+            margin-top: 0.6em;
+            p{
+                font-size: $font-xl / 2.2;
+            }
+        }
+        
+        &-button{
+            margin-top: 2.2em;
+            a{
+                font-size: $font-xl / 2.2;
+                background: darken($pink, 20%);
+                color: $white;
+                padding: 0.6em;
+                border-radius: 0.6em;
+            }
+        }
+
+        &-overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: $black;
+            opacity: 0.2;
+        }
+    }
+
+    &-desktop{
+        display: none;
+    }
+}

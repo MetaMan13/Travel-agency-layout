@@ -1,0 +1,264 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  src: url("./../../fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+
+input, button, textarea, select {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, a, i, button, input, label, textarea, p {
+  font-size: 1.6em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-size: 1.6em;
+}
+
+@-webkit-keyframes slideInFromRight {
+  from {
+    top: 0;
+    right: -150%;
+  }
+  to {
+    top: 0;
+    left: 0%;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    top: 0;
+    right: -150%;
+  }
+  to {
+    top: 0;
+    left: 0%;
+  }
+}
+
+@-webkit-keyframes slideOutToRight {
+  from {
+    top: 0;
+    right: 0%;
+  }
+  to {
+    top: 0;
+    left: -150%;
+  }
+}
+
+@keyframes slideOutToRight {
+  from {
+    top: 0;
+    right: 0%;
+  }
+  to {
+    top: 0;
+    left: -150%;
+  }
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8vh;
+  width: 100%;
+  z-index: 3;
+  color: #cccccc;
+}
+
+.navigation-mobile {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation-mobile-icon i {
+  font-size: 2em;
+}
+
+.navigation-mobile-logo h5 {
+  font-size: 2em;
+}
+
+.navigation-mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+  height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 8% auto;
+      grid-template-rows: 8% auto;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "overlay exit" "overlay menu";
+  display: none;
+  -webkit-animation-name: slideInFromRight;
+          animation-name: slideInFromRight;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+}
+
+.navigation-mobile-menu-exit {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: exit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: end;
+  background: #2A3846;
+}
+
+.navigation-mobile-menu-exit i {
+  width: 90%;
+  font-size: 2em;
+}
+
+.navigation-mobile-menu-items {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: menu;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #2A3846;
+}
+
+.navigation-mobile-menu-items-item {
+  padding: 1.6em;
+  margin-bottom: 1.6em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% auto;
+      grid-template-columns: 30% auto;
+  background: #344556;
+}
+
+.navigation-mobile-menu-items-item-icon i {
+  font-size: 2em;
+  color: #c6d1dd;
+}
+
+.navigation-mobile-menu-items-item-link a {
+  font-size: 2em;
+  color: #e6e6e6;
+  color: #c6d1dd;
+}
+
+.navigation-mobile-menu-overlay {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: overlay;
+  background: #2A3846;
+  opacity: 0.8;
+}
+
+.navigation-desktop {
+  display: none;
+}
+
+.landing {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("./../../images/test.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: #e6e6e6;
+}
+
+.landing-mobile {
+  width: 90%;
+  margin: 0 auto;
+  height: 45%;
+}
+
+.landing-mobile-header, .landing-mobile-text, .landing-mobile-button {
+  position: relative;
+  z-index: 1;
+}
+
+.landing-mobile-header h2 {
+  font-size: 3.906em;
+  font-weight: 500;
+}
+
+.landing-mobile-text {
+  margin-top: 0.6em;
+}
+
+.landing-mobile-text p {
+  font-size: 1.77545em;
+}
+
+.landing-mobile-button {
+  margin-top: 2.2em;
+}
+
+.landing-mobile-button a {
+  font-size: 1.77545em;
+  background: #bc464b;
+  color: #e6e6e6;
+  padding: 0.6em;
+  border-radius: 0.6em;
+}
+
+.landing-mobile-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #2A3846;
+  opacity: 0.2;
+}
+
+.landing-desktop {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */

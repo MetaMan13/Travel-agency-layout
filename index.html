@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>    
+    <nav class="navigation">
+        <div class="navigation-mobile">
+            <div class="navigation-mobile-logo">
+                <h5>Euroceps</h5>
+            </div>
+            <div class="navigation-mobile-icon">
+                <i class="fas fa-bars" onclick="openHamburgerMenu()"></i>
+            </div>
+            <div class="navigation-mobile-menu" id="hamburgerMenu">
+                <div class="navigation-mobile-menu-exit">
+                    <i class="fas fa-times-circle" onclick="closeHamburgerMenu()"></i>
+                </div>
+                <div class="navigation-mobile-menu-items">
+                    <div class="navigation-mobile-menu-items-item">
+                        <div class="navigation-mobile-menu-items-item-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="navigation-mobile-menu-items-item-link">
+                            <a href="#">Home</a>
+                        </div>
+                    </div>
+                    <div class="navigation-mobile-menu-items-item">
+                        <div class="navigation-mobile-menu-items-item-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="navigation-mobile-menu-items-item-link">
+                            <a href="#">Trips</a>
+                        </div>
+                    </div>
+                    <div class="navigation-mobile-menu-items-item">
+                        <div class="navigation-mobile-menu-items-item-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="navigation-mobile-menu-items-item-link">
+                            <a href="#">On sale</a>
+                        </div>
+                    </div>
+                    <div class="navigation-mobile-menu-items-item">
+                        <div class="navigation-mobile-menu-items-item-icon">
+                            <i class="fab fa-blogger-b"></i>
+                        </div>
+                        <div class="navigation-mobile-menu-items-item-link">
+                            <a href="#">Blog</a>
+                        </div>
+                    </div>
+                    <div class="navigation-mobile-menu-items-item">
+                        <div class="navigation-mobile-menu-items-item-icon">
+                            <i class="fas fa-address-book"></i>
+                        </div>
+                        <div class="navigation-mobile-menu-items-item-link">
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-mobile-menu-overlay" onclick="closeHamburgerMenu()"></div>
+            </div>
+        </div>
+        <div class="navigation-desktop"></div>
+    </nav>
+
+    <div class="social-links"></div>
+    <main class="landing">
+        <div class="landing-mobile">
+            <div class="landing-mobile-header">
+                <h2>Welcome <br> To Euroceps</h2>
+            </div>
+            <div class="landing-mobile-text">
+                <p>Over 10.000 trips just one click away</p>
+            </div>
+            <div class="landing-mobile-button">
+                <a href="#">Explore trips</a>
+            </div>
+            <div class="landing-mobile-overlay"></div>
+        </div>
+        <div class="landing-desktop"></div>
+    </main>
+    <section class="on-sale"></section>
+    <section class="newsletter"></section>
+    <section class="popular-destinations"></section>
+    <section class="testimonials"></section>
+    <footer class="footer"></footer>
+    <script defer src="https://kit.fontawesome.com/3d582cbdd1.js" crossorigin="anonymous"></script>
+    <script defer src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+.navigation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8vh;
+    width: 100%;
+    z-index: 3;
+    color: darken($white, 10%);
+    
+    &-mobile{
+        height: 100%;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-icon{
+            i{
+                font-size: $font-s;
+            }
+        }
+
+        &-logo{
+            h5{
+                font-size: $font-s;
+            }
+        }
+
+        &-menu{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 4;
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            grid-template-rows: 8% auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+            "overlay exit"
+            "overlay menu";
+            display: none;
+            animation-name: slideInFromRight;
+            animation-timing-function: ease;
+            animation-duration: 300ms;
+
+            &-exit{
+                grid-area: exit;
+                display: flex;
+                align-items: center;
+                text-align: end;
+                background: $black;
+
+                i{
+                    width: 90%;
+                    font-size: $font-s;
+                }
+            }
+
+            &-items{
+                grid-area: menu;
+                display: flex;
+                flex-direction: column;
+                background: $black;
+
+                &-item{
+                    padding: 1.6em;
+                    margin-bottom: 1.6em;
+                    display: grid;
+                    grid-template-columns: 30% auto;
+                    background: lighten($black,5%);
+
+                    &-icon{
+                        i{
+                            font-size: $font-s;
+                            color: lighten($black, 60%);
+                        }
+                    }
+                    
+                    &-link{
+                        a{
+                            font-size: $font-s;
+                            color: $white;
+                            color: lighten($black, 60%);
+                        }
+                    }
+                }
+            }
+
+            &-overlay{
+                grid-area: overlay;
+                background: $black;
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &-desktop{
+        display: none;
+    }
+}

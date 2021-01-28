@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    src: url('./../../fonts/Roboto-Regular.ttf');
+    font-weight: map-get($font-weight, regular);
+}
+
+input,button,textarea,select{
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6,a,i,button,input,label,textarea,p{
+    font-size: $font-xs;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: map-get($font-weight, regular);
+    font-size: $font-xs;
+}
