@@ -1,18 +1,19 @@
 .landing{
     height: 100vh;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    background: url('./../../images/test.jpg');
+    background: url('./../../images/landing-mobile.jpg');
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: $white;
+    color: darken($white, 10%);
 
     &-mobile{
         width: 90%;
         margin: 0 auto;
-        height: 45%;
 
         &-header, &-text, &-button{
             position: relative;
@@ -21,26 +22,26 @@
         
         &-header{
             h2{
-                font-size: $font-xl;
                 font-weight: 500;
+                font-size: $font-xxl;
             }
         }
-
+        
         &-text{
             margin-top: 0.6em;
             p{
-                font-size: $font-xl / 2.2;
+                font-size: $font-s;
             }
         }
         
         &-button{
-            margin-top: 2.2em;
+            margin-top: 2.4em;
             a{
-                font-size: $font-xl / 2.2;
-                background: darken($pink, 20%);
-                color: $white;
                 padding: 0.6em;
                 border-radius: 0.6em;
+                font-size: $font-m;
+                background: $blue-two;
+                color: $white;
             }
         }
 
@@ -48,14 +49,37 @@
             position: absolute;
             top: 0;
             left: 0;
-            height: 100%;
+            height: 100vh;
             width: 100%;
+            opacity: 0.6;
             background: $black;
-            opacity: 0.2;
         }
     }
 
     &-desktop{
         display: none;
+    }
+}
+
+@media screen and (min-width: 426px){
+    .landing{
+        background: url('./../../images/landing-tablet.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+
+        &-mobile{
+            text-align: center;
+        }
+    }
+}
+
+@media screen and(min-width: 767px){
+    .landing{
+        background: $white;
+        &-mobile{
+            display: none;
+        }
     }
 }

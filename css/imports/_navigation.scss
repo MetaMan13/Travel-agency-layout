@@ -5,7 +5,6 @@
     height: 8vh;
     width: 100%;
     z-index: 3;
-    color: darken($white, 10%);
     
     &-mobile{
         height: 100%;
@@ -14,16 +13,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color: $white;
+        color: darken($white, 10%);
 
         &-icon{
             i{
-                font-size: $font-s;
+                font-size: $font-m;
             }
         }
-
+        
         &-logo{
             h5{
-                font-size: $font-s;
+                font-size: $font-m;
             }
         }
 
@@ -36,67 +37,143 @@
             width: 100%;
             display: grid;
             grid-template-rows: 8% auto;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: 
-            "overlay exit"
-            "overlay menu";
+            background: $black;
+            color: darken($white,10%);
             display: none;
-            animation-name: slideInFromRight;
-            animation-timing-function: ease;
-            animation-duration: 300ms;
-
+            
             &-exit{
-                grid-area: exit;
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 text-align: end;
-                background: $black;
-
+                
                 i{
                     width: 90%;
-                    font-size: $font-s;
+                    font-size: $font-m;
                 }
             }
-
+            
             &-items{
-                grid-area: menu;
                 display: flex;
                 flex-direction: column;
-                background: $black;
-
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 8%;
+                
                 &-item{
                     padding: 1.6em;
                     margin-bottom: 1.6em;
+                    align-self: center;
+                    width: 40%;
                     display: grid;
-                    grid-template-columns: 30% auto;
-                    background: lighten($black,5%);
-
+                    grid-template-columns: 40% auto;
+                    
                     &-icon{
                         i{
-                            font-size: $font-s;
-                            color: lighten($black, 60%);
+                            font-size: $font-m;
                         }
                     }
                     
                     &-link{
                         a{
-                            font-size: $font-s;
-                            color: $white;
-                            color: lighten($black, 60%);
+                            font-size: $font-m;
+                            color: darken($white, 10%);
                         }
                     }
                 }
-            }
-
-            &-overlay{
-                grid-area: overlay;
-                background: $black;
-                opacity: 0.8;
-            }
+                
+                &-item:first-child{
+                    margin-top: 1.6em;
+                }
+            }            
         }
     }
 
     &-desktop{
         display: none;
+    }
+}
+
+@media screen and (min-width: 500px){
+    .navigation{
+        &-mobile{
+            &-menu{
+                &-items{
+                    &-item{
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px){
+    .navigation{
+        &-mobile{
+            &-menu{
+                &-items{
+                    &-item{
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px){
+    .navigation{
+        &-mobile{
+            display: none;
+        }
+
+        &-desktop{
+            display: grid;
+            height: 100%;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            
+            &-logo{
+                width: 80%;
+                justify-self: end;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                
+                h3{
+                    font-size: $font-m;
+                    font-weight: map-get($font-weight, "bold");
+                }
+            }
+
+            &-menu{
+                ul{
+                    height: 100%;
+                    width: 80%;
+                    display: grid;
+                    grid-template-columns: repeat(5,1fr);
+                    gap: 0.5em;
+                    align-items: center;
+                    list-style: none;
+                    text-align: center;
+                    justify-content: end;
+                    
+                    li{
+                        text-align: end;
+                        
+                        a{
+                            font-size: $font-s;
+                            transition: ease;
+                            transition-duration: 250ms;
+                            font-weight: map-get($font-weight, "bold");
+                        }
+                        
+                        a:hover, a:focus{
+                        }
+                    }
+                }
+            }
+        }
     }
 }
