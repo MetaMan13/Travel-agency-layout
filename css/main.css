@@ -157,15 +157,16 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
   .navigation-desktop {
+    color: #1C2023;
     display: -ms-grid;
     display: grid;
-    height: 100%;
-    width: 100%;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    height: 8vh;
+    color: #e6e6e6;
   }
   .navigation-desktop-logo {
-    width: 80%;
+    width: 90%;
     justify-self: end;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -183,31 +184,37 @@ h1, h2, h3, h4, h5, h6 {
   }
   .navigation-desktop-menu ul {
     height: 100%;
-    width: 80%;
+    width: 90%;
+    list-style: none;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
-    gap: 0.5em;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    list-style: none;
-    text-align: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    grid-gap: 1em;
   }
   .navigation-desktop-menu ul li {
     text-align: end;
   }
   .navigation-desktop-menu ul li a {
     font-size: 1.6em;
-    -webkit-transition: ease;
-    transition: ease;
-    -webkit-transition-duration: 250ms;
-            transition-duration: 250ms;
+    color: #e6e6e6;
+    -webkit-transition: ease-in-out;
+    transition: ease-in-out;
+    -webkit-transition-duration: 300ms;
+            transition-duration: 300ms;
     font-weight: 600;
+  }
+  .navigation-desktop-menu ul li a:hover, .navigation-desktop-menu ul li a:focus {
+    color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navigation-desktop-logo, .navigation-desktop-menu {
+    width: 80%;
   }
 }
 
@@ -299,6 +306,109 @@ h1, h2, h3, h4, h5, h6 {
   }
   .landing-mobile {
     display: none;
+  }
+  .landing-desktop {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: url("./../../images/landing-desktop-test.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .landing-desktop-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #1C2023;
+    opacity: 0.6;
+  }
+  .landing-desktop-header, .landing-desktop-content {
+    position: relative;
+    z-index: 1;
+  }
+  .landing-desktop-header {
+    width: 50%;
+  }
+  .landing-desktop-header h1 {
+    font-size: 4.8em;
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .landing-desktop-content {
+    width: 50%;
+    margin-top: 1em;
+  }
+  .landing-desktop-content-form {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 70% auto;
+        grid-template-columns: 70% auto;
+  }
+  .landing-desktop-content-form input {
+    font-size: 2.4em;
+    padding: 0.2em;
+    border: 2px #ffffff solid;
+    outline: none;
+    color: #1C2023;
+    -webkit-transition: ease-in-out;
+    transition: ease-in-out;
+    -webkit-transition-duration: 300ms;
+            transition-duration: 300ms;
+  }
+  .landing-desktop-content-form input:focus {
+    border: 2px #457B9C solid;
+    background: #f2f2f2;
+  }
+  .landing-desktop-content-form button {
+    font-size: 2.4em;
+    margin-left: 0.4em;
+    padding: 0.2em;
+    border: 2px #457B9C solid;
+    background: #457B9C;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: ease-in-out;
+    transition: ease-in-out;
+    -webkit-transition-duration: 300ms;
+            transition-duration: 300ms;
+  }
+  .landing-desktop-content-form button:focus, .landing-desktop-content-form button:hover {
+    background: #355f79;
+    color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .landing-desktop {
+    background: url("./../../images/landing-desktop-test.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .landing-desktop-header {
+    width: 35%;
+  }
+  .landing-desktop-content {
+    width: 35%;
   }
 }
 /*# sourceMappingURL=main.css.map */

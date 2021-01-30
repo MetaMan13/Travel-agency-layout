@@ -81,5 +81,108 @@
         &-mobile{
             display: none;
         }
+
+        &-desktop{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url('./../../images/landing-desktop-test.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            &-overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: $black;
+                opacity: 0.6;
+            }
+
+            &-header, &-content{
+                position: relative;
+                z-index: 1;
+            }
+
+            &-header{
+                width: 50%;
+
+                h1{
+                    font-size: $font-xxl + 1.6em;
+                    font-weight: map-get($font-weight, "bold");
+                    color: $white;
+                }
+            }
+
+            &-content{
+                width: 50%;
+                margin-top: 1em;
+
+                &-form{
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 70% auto;
+
+                    input{
+                        font-size: ($font-xxl + 1.6em) / 2;
+                        padding: 0.2em;
+                        border: 2px $white solid;
+                        outline: none;
+                        color: $black;
+                        transition: ease-in-out;
+                        transition-duration: 300ms;
+                    }
+
+                    input:focus{
+                        border: 2px $blue-two solid;
+                        background: darken($white, 5%);
+                    }
+                    
+                    button{
+                        font-size: ($font-xxl + 1.6em) / 2;
+                        margin-left: 0.4em;
+                        padding: 0.2em;
+                        border: 2px $blue-two solid;
+                        background: $blue-two;
+                        color: $white;
+                        outline: none;
+                        cursor: pointer;
+                        transition: ease-in-out;
+                        transition-duration: 300ms;
+                    }
+                    
+                    button:focus, button:hover{
+                        background: darken($blue-two, 10%);
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .landing{
+        &-desktop{
+            background: url('./../../images/landing-desktop-test.jpg');
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            &-header{
+                width: 35%;
+            }
+
+            &-content{
+                width: 35%;
+            }
+        }
     }
 }
