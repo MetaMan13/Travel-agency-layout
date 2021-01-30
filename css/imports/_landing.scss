@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('./../../images/landing-mobile.jpg');
+    background: url('./../../images/landing-mobile.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@
 
 @media screen and (min-width: 426px){
     .landing{
-        background: url('./../../images/landing-tablet.jpg');
+        background: url('./../../images/landing-tablet.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
@@ -89,7 +89,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: url('./../../images/landing-desktop-test.jpg');
+            background: url('./../../images/landing-desktop.webp');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -170,7 +170,7 @@
 @media screen and (min-width: 1024px){
     .landing{
         &-desktop{
-            background: url('./../../images/landing-desktop-test.jpg');
+            background: url('./../../images/landing-desktop.webp');
             background-size: cover;
             background-position: top;
             background-repeat: no-repeat;

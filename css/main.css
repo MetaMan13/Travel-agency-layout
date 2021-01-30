@@ -229,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: url("./../../images/landing-mobile.jpg");
+  background: url("./../../images/landing-mobile.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -289,7 +289,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 426px) {
   .landing {
-    background: url("./../../images/landing-tablet.jpg");
+    background: url("./../../images/landing-tablet.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -323,7 +323,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background: url("./../../images/landing-desktop-test.jpg");
+    background: url("./../../images/landing-desktop.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media screen and (min-width: 1024px) {
   .landing-desktop {
-    background: url("./../../images/landing-desktop-test.jpg");
+    background: url("./../../images/landing-desktop.webp");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
