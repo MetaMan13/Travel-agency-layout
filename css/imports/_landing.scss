@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('./../../images/landing-mobile.webp');
     background: url('https://raw.githubusercontent.com/MetaMan13/Travel-agency-layout/main/images/landing-mobile.webp');
     background-size: cover;
     background-position: center;
@@ -64,7 +63,6 @@
 
 @media screen and (min-width: 426px){
     .landing{
-        background: url('./../../images/landing-tablet.webp');
         background: url('https://raw.githubusercontent.com/MetaMan13/Travel-agency-layout/main/images/landing-tablet.webp');
         background-repeat: no-repeat;
         background-position: center;
@@ -91,7 +89,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: url('./../../images/landing-desktop.webp');
             background: url('https://raw.githubusercontent.com/MetaMan13/Travel-agency-layout/main/images/landing-desktop.webp');
             background-size: cover;
             background-position: center;
@@ -173,7 +170,6 @@
 @media screen and (min-width: 1024px){
     .landing{
         &-desktop{
-            background: url('./../../images/landing-desktop.webp');
             background: url('https://raw.githubusercontent.com/MetaMan13/Travel-agency-layout/main/images/landing-desktop.webp');
             background-size: cover;
             background-position: top;
